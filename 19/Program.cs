@@ -13,7 +13,7 @@ string number = Console.ReadLine();
 int length = number.Length;
 string txt = number.Replace(" ","");  /// для проверки текста на палиндром
 
-bool IsPalindrome()
+bool Pal()
 {
     for (int i = 0; i < length / 2; i++)
         while (number[i] == number[length - 1])
@@ -23,7 +23,7 @@ bool IsPalindrome()
     return false;
 }
 
-if (IsPalindrome()) 
+if (Pal()) 
 {
     Console.WriteLine($"Число {number} является палиндромом");
 }
