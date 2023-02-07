@@ -11,16 +11,16 @@ Console.Clear();
 Console.Write("Введите число: ");
 string number = Console.ReadLine();
 int length = number.Length;
-string txt = number.Replace(" ","");  /// для проверки текста на палиндром
+string txt = number.Replace(" ","");  
 
 bool Pal()
 {
     for (int i = 0; i < length / 2; i++)
-        while (number[i] == number[length - 1])
+        if (number[i] != number[length - 1 - i])
         {
-            return true;
+            return false;
         }
-    return false;
+     return true;   
 }
 
 if (Pal()) 
